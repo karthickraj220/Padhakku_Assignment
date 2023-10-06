@@ -1,3 +1,6 @@
+const express = require("express");
+const app = express();
+
 app.post('/api/signup', async (req, res) => {
     // Get the user's information from the request body
     const { name, email} = req.body;
@@ -92,4 +95,6 @@ app.post('/api/signup', async (req, res) => {
     }
     res.json({ posts });
   });
+
+app.listen(3000);
   
